@@ -1,66 +1,401 @@
-# Special Sathi – Account & Data Deletion
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-**Last Updated: September 22, 2026**
+  <title>Delete Account | Special Sathi</title>
 
-Special Sathi respects your privacy and provides users with the ability to permanently delete their account and associated personal data.
+  <meta
+    name="description"
+    content="Learn how to delete your Special Sathi account and associated personal data."
+  />
 
-## How to Delete Your Account
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-You can permanently delete your Special Sathi account directly from the app.
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f9fb;
+      color: #333;
+      line-height: 1.7;
+    }
 
-### Steps:
+    .header {
+      background: linear-gradient(135deg, #e21b2b, #c91424);
+      color: #fff;
+      padding: 45px 20px;
+      text-align: center;
+    }
 
-1. Open the **Special Sathi** app.
-2. Go to your **Profile**.
-3. Open **Settings**.
-4. Select **Delete Account**.
-5. Review the information shown on the confirmation screen.
-6. Confirm that you want to permanently delete your account.
+    .logo {
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 20px;
+      padding: 8px;
+      margin-bottom: 15px;
+    }
 
-Once the deletion process is completed, your account will no longer be available for use.
+    .header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
 
-## Data That Will Be Deleted
+    .header p {
+      font-size: 16px;
+      opacity: 0.95;
+    }
 
-When you permanently delete your account, the following account-associated data will be deleted, subject to the retention requirements described below:
+    .container {
+      max-width: 900px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
 
-* Mobile number and account information
-* Name and basic profile information
-* Date of birth, gender, education and occupation information
-* Matrimony and profile details
-* Profile photographs
-* Location information associated with your account
-* Uploaded identity and disability verification documents
-* Account-related preferences and settings
-* Other personal information associated with your account
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      border: 1px solid #eee;
+    }
 
-## Data That May Be Retained
+    .card h2 {
+      color: #e21b2b;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
 
-Certain information may need to be retained for a limited period where required for:
+    .card h3 {
+      color: #444;
+      font-size: 17px;
+      margin: 20px 0 10px;
+    }
 
-* Legal or regulatory compliance
-* Fraud prevention and security
-* Resolving disputes
-* Enforcing our terms and policies
-* Maintaining necessary technical or security records
+    .card p {
+      margin-bottom: 12px;
+    }
 
-Any retained information will be kept only for as long as reasonably necessary for the applicable purpose and will be deleted or anonymized when it is no longer required.
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      margin-top: 20px;
+    }
 
-## Account Deactivation
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 14px 15px 14px 55px;
+      margin-bottom: 12px;
+      background: #fff5f6;
+      border-radius: 10px;
+      border-left: 4px solid #e21b2b;
+    }
 
-If you do not want to permanently delete your account, Special Sathi also provides an **Account Deactivation** option where available.
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 14px;
+      top: 12px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #e21b2b;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-Deactivation is different from permanent account deletion. A deactivated account may be reactivated according to the application's available reactivation process.
+    ul {
+      padding-left: 22px;
+    }
 
-## Unable to Access the App?
+    li {
+      margin-bottom: 8px;
+    }
 
-If you cannot access your Special Sathi account and need to request account deletion, please contact the Special Sathi support team through the contact/support information provided on the official Special Sathi website or app.
+    .notice {
+      background: #fff5f6;
+      border: 1px solid #f3b7bd;
+      border-left: 5px solid #e21b2b;
+      padding: 18px 20px;
+      border-radius: 10px;
+      margin-top: 18px;
+    }
 
-Please include sufficient information to help us verify your account ownership. Do not send passwords, OTPs, or other sensitive authentication credentials.
+    .notice strong {
+      color: #c91424;
+    }
 
-## Important
+    .deactivation {
+      background: #f7f7f7;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 15px;
+    }
 
-Account deletion is permanent and may not be reversible after the deletion process has been completed.
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+      font-size: 14px;
+    }
 
-For more information about how Special Sathi collects, uses and protects personal information, please refer to the **Special Sathi Privacy Policy**.
+    .footer strong {
+      color: #e21b2b;
+    }
 
-© 2026 Special Sathi. All rights reserved.
+    @media (max-width: 600px) {
+      .header {
+        padding: 35px 18px;
+      }
+
+      .header h1 {
+        font-size: 26px;
+      }
+
+      .container {
+        margin: 20px auto;
+        padding: 0 14px;
+      }
+
+      .card {
+        padding: 22px 18px;
+        border-radius: 13px;
+      }
+
+      .card h2 {
+        font-size: 20px;
+      }
+
+      .steps li {
+        padding-left: 52px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <!--
+      If you have a Special Sathi logo hosted online,
+      you can replace this placeholder with your logo URL.
+    -->
+    <div
+      style="
+        width:82px;
+        height:82px;
+        margin:0 auto 15px;
+        background:#fff;
+        border-radius:20px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#e21b2b;
+        font-size:30px;
+        font-weight:bold;
+      "
+    >
+      SS
+    </div>
+
+    <h1>Account &amp; Data Deletion</h1>
+
+    <p>Special Sathi</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Introduction -->
+    <section class="card">
+      <h2>Account &amp; Data Deletion</h2>
+
+      <p>
+        Special Sathi respects your privacy and provides users with the
+        ability to permanently delete their account and associated personal
+        data.
+      </p>
+
+      <p>
+        <strong>Last Updated:</strong> September 22, 2026
+      </p>
+    </section>
+
+    <!-- How to Delete -->
+    <section class="card">
+      <h2>How to Delete Your Account</h2>
+
+      <p>
+        You can permanently delete your Special Sathi account directly from
+        the mobile application.
+      </p>
+
+      <h3>Steps to delete your account:</h3>
+
+      <ol class="steps">
+        <li>Open the <strong>Special Sathi</strong> app.</li>
+
+        <li>
+          Go to your <strong>Profile</strong>.
+        </li>
+
+        <li>
+          Open <strong>Settings</strong>.
+        </li>
+
+        <li>
+          Select <strong>Delete Account</strong>.
+        </li>
+
+        <li>
+          Review the information displayed on the confirmation screen.
+        </li>
+
+        <li>
+          Confirm that you want to permanently delete your account.
+        </li>
+      </ol>
+
+      <div class="notice">
+        <strong>Important:</strong>
+        Account deletion is permanent. Once the deletion process has been
+        completed, your account may not be recoverable.
+      </div>
+    </section>
+
+    <!-- Deleted Data -->
+    <section class="card">
+      <h2>Data That Will Be Deleted</h2>
+
+      <p>
+        When you permanently delete your account, account-associated personal
+        data will be deleted, subject to applicable legal and security
+        retention requirements.
+      </p>
+
+      <ul>
+        <li>Mobile number and account information</li>
+        <li>Name and basic profile information</li>
+        <li>Date of birth, gender, education and occupation information</li>
+        <li>Matrimony and profile details</li>
+        <li>Profile photographs</li>
+        <li>Location information associated with your account</li>
+        <li>Uploaded identity and disability verification documents</li>
+        <li>Account-related preferences and settings</li>
+        <li>Other personal information associated with your account</li>
+      </ul>
+    </section>
+
+    <!-- Retained Data -->
+    <section class="card">
+      <h2>Data That May Be Retained</h2>
+
+      <p>
+        Certain information may be retained for a limited period where
+        necessary for legitimate purposes, including:
+      </p>
+
+      <ul>
+        <li>Legal or regulatory compliance</li>
+        <li>Fraud prevention and security</li>
+        <li>Resolving disputes</li>
+        <li>Enforcing our terms and policies</li>
+        <li>Maintaining necessary technical or security records</li>
+      </ul>
+
+      <p>
+        Any retained information will be kept only for as long as reasonably
+        necessary for the applicable purpose and will be deleted or
+        anonymized when it is no longer required.
+      </p>
+    </section>
+
+    <!-- Deactivation -->
+    <section class="card">
+      <h2>Account Deactivation</h2>
+
+      <div class="deactivation">
+        <p>
+          If you do not want to permanently delete your account, Special Sathi
+          also provides an <strong>Account Deactivation</strong> option.
+        </p>
+
+        <p>
+          Deactivation is different from permanent account deletion.
+          A deactivated account may be reactivated according to the
+          application's available reactivation process.
+        </p>
+      </div>
+    </section>
+
+    <!-- Unable to Access -->
+    <section class="card">
+      <h2>Unable to Access the App?</h2>
+
+      <p>
+        If you cannot access your Special Sathi account and need to request
+        account deletion, please contact the Special Sathi support team
+        through the contact or support information provided by Special Sathi.
+      </p>
+
+      <p>
+        You may be asked to provide sufficient information to verify account
+        ownership before a deletion request can be processed.
+      </p>
+
+      <div class="notice">
+        <strong>Security Notice:</strong>
+        Never send your password, OTP, or other authentication credentials
+        when requesting account deletion.
+      </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section class="card">
+      <h2>Privacy Policy</h2>
+
+      <p>
+        For more information about how Special Sathi collects, uses, stores
+        and protects personal information, please refer to the
+        <strong>Special Sathi Privacy Policy</strong>.
+      </p>
+    </section>
+
+    <!-- Final Notice -->
+    <section class="card">
+      <h2>Important Information</h2>
+
+      <p>
+        Account deletion is permanent and may not be reversible after the
+        deletion process has been completed.
+      </p>
+
+      <p>
+        By requesting account deletion, you acknowledge that your account and
+        associated personal data may no longer be available after the
+        deletion process is completed.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>
+      &copy; 2026 <strong>Special Sathi</strong>. All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
